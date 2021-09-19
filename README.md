@@ -58,3 +58,6 @@
 - You will have a good understanding of basic AI techniques (solving problems using searching)
 - You will become a real python programmer and most importantly a real programmer!
 - You will see a lot of programming challenges and you will learn how to solve them
+
+## Reference
+
