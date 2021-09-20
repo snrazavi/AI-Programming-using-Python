@@ -2,8 +2,7 @@
 This repository contains implementation of different AI algorithms, based on the amazing AI book [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu).
 ## Contents
 
-<img src="TSP-Iran.png" width="50%"/>
-
+![TSP](Search/imgs/TSP-Iran.png)
 ### First part:
 - Search problems
     - Uninformed search strategies:
