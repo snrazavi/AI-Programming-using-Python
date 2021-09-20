@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 def print_solution(start_state, path):
-    if path is None:
+    if not isinstance(path, list):
         print("No solution found!")
         return
     
