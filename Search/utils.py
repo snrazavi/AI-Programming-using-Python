@@ -83,7 +83,6 @@ class Stack:
             return item
         except:
             print('ERROR! trying to pop an element from an empty stack.')
-                
     
     def is_empty(self):
         return len(self._items) == 0
@@ -115,7 +114,6 @@ class Queue:
             return item
         except:
             print('ERROR! trying to pop an element from an empty queue.')
-                
     
     def is_empty(self):
         return len(self._items) == 0
@@ -128,6 +126,8 @@ class Queue:
     
 
 class PriorityQueue:
+    ''' Min Priority Queue '''
+    
     def __init__(self, items=None):
         self._items = []
         self.index = 0
