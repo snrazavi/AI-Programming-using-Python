@@ -14,7 +14,7 @@ This repository contains implementation of different AI algorithms, based on the
         - MiniMax, alpha-beta pruning
 
 <p align="center">
-  <img width="50%" src="Search/imgs/TSP-Iran.png">
+  <img width="50%" src="Search/imgs/TSP-Ir.png">
   <br>Example: solving TSP using genetic algorithm
 </p>
 
