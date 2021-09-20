@@ -85,6 +85,7 @@ class NPuzzleState:
     
     def __eq__(self, other):
         if self is other: return True  # True object equallity test for efficiency
+        if other is None: return False
         if not isinstance(other, NPuzzleState): return False
         
         return self.tiles == other.tiles
