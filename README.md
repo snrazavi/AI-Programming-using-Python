@@ -1,5 +1,5 @@
 # AI-Programming-using-Python
-This repository contains implementation of diiferent AI algorithms, based on the amazing AI book [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu).
+This repository contains implementation of different AI algorithms, based on the amazing AI book [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu).
 ## Contents
 
 ### First part:
