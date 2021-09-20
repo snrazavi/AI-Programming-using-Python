@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/snrazavi/AI-Programming-using-Python/HEAD?filepath=https%3A%2F%2Fgithub.com%2Fsnrazavi%2FAI-Programming-using-Python%2Fblob%2Fmain%2FSearch%2F01-Search_Problem_Formulation_NPuzzle.ipynb)
+
 # AI-Programming-using-Python
 This repository contains implementation of different AI algorithms, based on the amazing AI book [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu).
 ## Contents
