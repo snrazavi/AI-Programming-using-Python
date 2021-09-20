@@ -2,7 +2,6 @@
 This repository contains implementation of different AI algorithms, based on the amazing AI book [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu).
 ## Contents
 
-![TSP](Search/imgs/TSP-Iran.png)
 ### First part:
 - Search problems
     - Uninformed search strategies:
@@ -13,6 +12,11 @@ This repository contains implementation of different AI algorithms, based on the
         - Hill climbing, Simulated Annealing, Genetic algorithms
     - Adversarial search and games
         - MiniMax, alpha-beta pruning
+
+<p align="center">
+  <img width="50%" src="Search/imgs/TSP-Iran.png">
+  <br>Example: solving TSP using genetic algorithm
+</p>
 
 ### Second part:
 - Machine learning
