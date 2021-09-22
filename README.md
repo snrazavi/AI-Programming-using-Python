@@ -18,6 +18,13 @@ This repository contains implementation of different AI algorithms, based on the
   <br>Example: solving TSP using genetic algorithm
 </p>
 
+#### Python programming concepts
+- Using and defining special python metthods (dunder methods).
+- Immutable objects.
+- Making and object hashable (implementing `__hash__()` and `__eq__()` methods.
+- Implementing decortors in Python.
+- Object oriented programming in Python
+
 ### Second part:
 - Machine learning
     - Supervised learning:
