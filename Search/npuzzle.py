@@ -70,8 +70,12 @@ class NPuzzleState:
             if tile == 0: continue
             col = self.grid_size - 1 - i // self.grid_size
             row = i %  self.grid_size
-            cell = plt.Rectangle((row * size, col * size), size, size, fc='gray', ec='k', lw=3)
+            cell = plt.Rectangle((row * size, col * size), size, size, fc='darkslateblue', ec='k', lw=3, alpha=0.4)
             ax.add_patch(cell)
+            tileSq = plt.Rectangle((row * size + int(size * 0.1), col * size + int(size * 0.1)), 
+                                   int(size*0.8), int(size*0.8), fc='darkslateblue', ec='k', lw=1, alpha=0.8)
+            ax.add_patch(tileSq)
+
             ax.text(row * size + size//2, col * size + size//2, "%d" % tile, color='w', 
                     fontsize=fs, verticalalignment='center', horizontalalignment='center')
         
