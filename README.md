@@ -10,7 +10,7 @@ This repository contains implementation of different AI algorithms, based on the
         - Gready, A-star
 
 <p align="center">
-  <img width="75%" src="Search/imgs/sample_solution_path.png">
+  <img width="85%" src="Search/imgs/sample_solution_path.png">
   <br>Example: solving 8-puzzle using search algorithms.
 </p>
 
