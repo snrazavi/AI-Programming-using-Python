@@ -8,15 +8,21 @@ This repository contains implementation of different AI algorithms, based on the
         - BFS, DFS, UCS, DLS, IDS
     - Informed search strategies:
         - Gready, A-star
+
+<p align="center">
+  <img width="75%" src="Search/imgs/sample_solution_path.png">
+  <br>Example: solving 8-puzzle using search algorithms.
+</p>
+
     - Local search:
         - Hill climbing, Simulated Annealing, Genetic algorithms
-    - Adversarial search and games
-        - MiniMax, alpha-beta pruning
 
 <p align="center">
   <img width="50%" src="Search/imgs/TSP-Ir.png">
   <br>Example: solving TSP using genetic algorithm
 </p>
+    - Adversarial search and games
+        - MiniMax, alpha-beta pruning
 
 #### Python programming concepts
 - Object oriented programming in Python
