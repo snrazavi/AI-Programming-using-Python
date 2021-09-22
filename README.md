@@ -21,6 +21,12 @@ This repository contains implementation of different AI algorithms, based on the
   <img width="50%" src="Search/imgs/TSP-Ir.png">
   <br>Example: solving TSP using genetic algorithm
 </p>
+
+<p align="center">
+  <img width="50%" src="Search/imgs/10-queens.gif">
+  <br>Example: solving 10-Queens using simulated annealing.
+</p>
+
     - Adversarial search and games
         - MiniMax, alpha-beta pruning
 
