@@ -19,7 +19,7 @@ This repository contains implementation of different AI algorithms, based on the
 </p>
 
 #### Python programming concepts
-- Using and defining special python metthods (dunder methods).
+- Using and defining special python methods (dunder methods).
 - Immutable objects.
 - Making and object hashable (implementing `__hash__()` and `__eq__()` methods.
 - Implementing decortors in Python.
