@@ -1,7 +1,17 @@
 import math
+import time
 import heapq, random
 
 import matplotlib.pyplot as plt
+
+
+def timed(f, *args, **kwargs):
+    ''' Decorator function for search algorithms which computes time required for searching'''
+    
+    start_time = time.time()
+    sol = f(*args, **kwargs)
+    execution_time = time.time() - start_time
+    return execution_time, sol
 
 
 def print_solution(start_state, path):
