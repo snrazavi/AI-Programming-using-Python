@@ -1,5 +1,12 @@
 ## Local Search
 
+### N-Puzzle
+                                                             
+<p align="center">
+  <img width="25%" src="imgs/25-puzzle.gif">
+  <br>Example solution path found by A-Star for 25-puzzle problem.
+</p>
+
 ### Hill Climbing
                                                              
 <p align="center">
