@@ -20,3 +20,11 @@
   <img width="100%" src="imgs/10-queens.gif">
   <br>Example solution found by simulated annealing for 10-Queens problem.
 </p>
+
+
+### Genetic Algorithm
+                                                             
+<p align="center">
+  <img width="100%" src="imgs/100-queens-ga.gif">
+  <br>Example solution found by genetic algorithm for 100-Queens problem.
+</p>
