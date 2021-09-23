@@ -17,6 +17,6 @@
 ### Simulated Annealing
                                                              
 <p align="center">
-  <img width="50%" src="imgs/10-queens.gif">
+  <img width="100%" src="imgs/10-queens.gif">
   <br>Example solution found by simulated annealing for 10-Queens problem.
 </p>

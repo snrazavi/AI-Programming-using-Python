@@ -23,7 +23,7 @@ This repository contains implementation of different AI algorithms, based on the
 </p>
 
 <p align="center">
-  <img width="50%" src="Search/imgs/10-queens.gif">
+  <img width="100%" src="Search/imgs/10-queens.gif">
   <br>Example: solving 10-Queens using simulated annealing.
 </p>
 
