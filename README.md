@@ -18,14 +18,16 @@ This repository contains implementation of different AI algorithms, based on the
         - Hill climbing, Simulated Annealing, Genetic algorithms
 
 <p align="center">
-  <img width="70%" src="imgs/50-tsp-sa.gif">
-  <br>Example solution found by simulated annealing for TSP problem (for 50 cities).
-</p>
-
-<p align="center">
   <img width="100%" src="Search/imgs/10-queens.gif">
   <br>Example: solving 10-Queens using simulated annealing.
 </p>
+
+
+<p align="center">
+  <img width="70%" src="Search/imgs/50-tsp-sa.gif">
+  <br>Example solution found by simulated annealing for TSP problem (for 50 cities).
+</p>
+
 
     - Adversarial search and games
         - MiniMax, alpha-beta pruning
