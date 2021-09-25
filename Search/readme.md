@@ -28,3 +28,11 @@
   <img width="100%" src="imgs/100-queens-ga.gif">
   <br>Example solution found by genetic algorithm for 100-Queens problem.
 </p>
+
+
+### Simulated Annealing (TSP)
+                                                             
+<p align="center">
+  <img width="70%" src="imgs/50-tsp-sa.gif">
+  <br>Example solution found by simulated annealing for 10-Queens problem.
+</p>
