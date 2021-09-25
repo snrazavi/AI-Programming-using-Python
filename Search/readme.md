@@ -33,6 +33,6 @@
 ### Simulated Annealing (TSP)
                                                              
 <p align="center">
-  <img width="70%" src="imgs/50-tsp-sa.gif">
+  <img width="50%" src="imgs/50-tsp-sa.gif">
   <br>Example solution found by simulated annealing for TSP problem (for 50 cities).
 </p>
