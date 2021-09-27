@@ -18,8 +18,8 @@ This repository contains implementation of different AI algorithms, based on the
         - Hill climbing, Simulated Annealing, Genetic algorithms
 
 <p align="center">
-  <img width="50%" src="Search/imgs/TSP-Ir.png">
-  <br>Example: solving TSP using genetic algorithm
+  <img width="50%" src="Search/imgs/50-tsp-sa.gif">
+  <br>Example solution found by simulated annealing for TSP problem (for 50 cities).
 </p>
 
 <p align="center">
