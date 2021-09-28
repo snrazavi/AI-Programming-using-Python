@@ -277,8 +277,7 @@ def create_animation(history,
                      plot_objective=False,
                      summarize=False,
                      xlabel="Generation", 
-                     ylabel="Conflicts",
-                     save_filename=None):
+                     ylabel="Conflicts"):
     
     hist = summarize_history(history) if summarize else history
     
@@ -307,13 +306,6 @@ def create_animation(history,
         ax1 = fig.add_subplot(1, 1, 1)
 
 
-    anim = FuncAnimation(fig, animate, frames=range(len(hist)), interval=200, repeat=True)
-    
-    if save_filename:
-        try:
-            anim.save(save_filename, writer='imagemagick')
-        except:
-            print('Not able to save the GIF file.')
-    
+    anim = FuncAnimation(fig, animate, frames=range(len(hist)), interval=200, repeat=True)    
     clear_output()
     return anim
