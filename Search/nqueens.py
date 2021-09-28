@@ -1,5 +1,7 @@
 import random
 import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from IPython.display import clear_output
 
 
 class NQueensState:
@@ -22,7 +24,7 @@ class NQueensState:
         if other is None: return False
         if not isinstance(other, NQueensState): return False
     
-        return self.conflicts() == other.conflicts()
+        return self.queens == other.queens
     
     def __ge__(self, other):
         if self is other: return True
@@ -153,7 +155,7 @@ class NQueensStatePermutation:
         if other is None: return False
         if not isinstance(other, NQueensStatePermutation): return False
     
-        return self.conflicts() == other.conflicts()
+        return self.queens == other.queens
     
     def __ge__(self, other):
         if self is other: return True
@@ -250,7 +252,7 @@ class NQueensStatePermutation:
 
         ax.axis('square')
         ax.axis('off')
-        ax.set_title("Conflicts = {}".format(self.conflicts()), fontsize=18)
+        ax.set_title("Conflicts = {}".format(self.conflicts()), fontsize=12)
         plt.show()    
         
     def __str__(self):
@@ -258,3 +260,60 @@ class NQueensStatePermutation:
     
     def __repr__(self):
         return f'NQueensStatePermutation(queens={self.queens})'
+    
+    
+def summarize_history(history):
+    ''' Remove states that are equal to their previous state in the history (for animation)
+    '''
+    reduced = [history[0]]
+    for i in range(1, len(history)):
+        if history[i].queens != reduced[-1].queens:
+            reduced.append(history[i])
+    return reduced
+
+
+def create_animation(history, 
+                     figsize=(18, 6), dpi=120,
+                     plot_objective=False,
+                     summarize=False,
+                     xlabel="Generation", 
+                     ylabel="Conflicts",
+                     save_filename=None):
+    
+    hist = summarize_history(history) if summarize else history
+    
+    def animate(i):
+        # plot the board
+        ax1.clear()
+        state = hist[i]
+        state.plot(ax1, show_conflicts=True)
+        
+        # plot objective function value
+        if plot_objective:
+            ax2.clear()
+            ax2.plot([s.conflicts() for s in hist[:i]])
+            ax2.set_xlim(0, len(history))
+            ax2.set_ylim(0, max([s.conflicts() for s in hist]))
+            ax2.set_xlabel(xlabel)
+            ax2.set_ylabel(ylabel)
+        
+    if plot_objective:
+        fig = plt.figure(figsize=figsize, dpi=dpi)
+        ax1 = fig.add_subplot(1, 2, 1)
+        ax2 = fig.add_subplot(1, 2, 2)
+    else:
+        figsize = (figsize[1], figsize[1])
+        fig = plt.figure(figsize=figsize, dpi=dpi)
+        ax1 = fig.add_subplot(1, 1, 1)
+
+
+    anim = FuncAnimation(fig, animate, frames=range(len(hist)), interval=200, repeat=True)
+    
+    if save_filename:
+        try:
+            anim.save(save_filename, writer='imagemagick')
+        except:
+            print('Not able to save the GIF file.')
+    
+    clear_output()
+    return anim
