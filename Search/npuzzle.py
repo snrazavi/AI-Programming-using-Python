@@ -56,13 +56,12 @@ class NPuzzleState:
     
     def plot(self, ax=None, title=None, fs=20):
         if ax is None:
-            fig, ax = plt.subplots(1)
+            _, ax = plt.subplots(1)
             
-        size = 10
         gs = self.grid_size
         
         # draw border
-        border = plt.Rectangle((0, 0), gs * size, gs * size, ec='k', fc='w', lw=3)
+        border = plt.Rectangle((0, 0), gs, gs, ec='k', fc='w', lw=3)
         ax.add_patch(border)
         
         # draw tiles
@@ -70,14 +69,11 @@ class NPuzzleState:
             if tile == 0: continue
             col = self.grid_size - 1 - i // self.grid_size
             row = i %  self.grid_size
-            cell = plt.Rectangle((row * size, col * size), size, size, fc='darkslateblue', ec='k', lw=3, alpha=0.4)
+            cell = plt.Rectangle((row, col), 1, 1, fc='darkslateblue', ec='k', lw=3, alpha=0.4)
             ax.add_patch(cell)
-            tileSq = plt.Rectangle((row * size + int(size * 0.1), col * size + int(size * 0.1)), 
-                                   int(size*0.8), int(size*0.8), fc='darkslateblue', ec='k', lw=1, alpha=0.8)
+            tileSq = plt.Rectangle((row + 0.15, col + 0.15), 0.7, 0.7, fc='darkslateblue', ec='k', lw=1, alpha=0.8)
             ax.add_patch(tileSq)
-
-            ax.text(row * size + size//2, col * size + size//2, "%d" % tile, color='w', 
-                    fontsize=fs, verticalalignment='center', horizontalalignment='center')
+            ax.text(row + 0.5, col + 0.5, f"{tile}", color='w', fontsize=fs, va='center', ha='center')
         
         ax.axis('square')
         ax.axis('off')
