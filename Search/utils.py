@@ -25,7 +25,7 @@ def print_solution(start_state, path):
         print(state)
 
 
-def show_solution(start_state, path, ncols=5):
+def show_solution(start_state, path, ncols=5, fs=18):
     if not isinstance(path, list):
         print("No solution found!")
         return
@@ -36,16 +36,16 @@ def show_solution(start_state, path, ncols=5):
     fig, axes = plt.subplots(nrows, ncols, figsize=(3 * ncols, 3 * nrows))
     
     if nrows > 1:
-        start_state.plot(axes[0][0], 'start', 18)
+        start_state.plot(axes[0][0], 'start', fs)
         for i, (state, action) in enumerate(path):
-            state.plot(axes[(i + 1) // ncols][(i + 1) % ncols], action, 18)
+            state.plot(axes[(i + 1) // ncols][(i + 1) % ncols], action, fs)
         for i in range(N, nrows * ncols):
             axes[nrows-1][i % ncols].axis('off')
     
     else:
-        start_state.plot(axes[0], 'start', 18)
+        start_state.plot(axes[0], 'start', fs)
         for i, (state, action) in enumerate(path):
-            state.plot(axes[i + 1], action, 18)
+            state.plot(axes[i + 1], action, fs)
         for i in range(N, ncols):
             axes[i].axis('off')
 
