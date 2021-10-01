@@ -277,7 +277,8 @@ def create_animation(history,
                      plot_objective=False,
                      summarize=False,
                      xlabel="Generation", 
-                     ylabel="Conflicts"):
+                     ylabel="Conflicts",
+                     interval=200):
     
     hist = summarize_history(history) if summarize else history
     
@@ -290,7 +291,7 @@ def create_animation(history,
         # plot objective function value
         if plot_objective:
             ax2.clear()
-            ax2.plot([s.conflicts() for s in hist[:i]])
+            ax2.plot([s.conflicts() for s in hist[:i + 1]])
             ax2.set_xlim(0, len(history))
             ax2.set_ylim(0, max([s.conflicts() for s in hist]))
             ax2.set_xlabel(xlabel)
@@ -305,7 +306,5 @@ def create_animation(history,
         fig = plt.figure(figsize=figsize, dpi=dpi)
         ax1 = fig.add_subplot(1, 1, 1)
 
-
-    anim = FuncAnimation(fig, animate, frames=range(len(hist)), interval=200, repeat=True)    
-    clear_output()
+    anim = FuncAnimation(fig, animate, frames=range(len(hist)), interval=interval, repeat=True)    
     return anim
