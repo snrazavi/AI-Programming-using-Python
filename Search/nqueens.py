@@ -84,25 +84,24 @@ class NQueensState:
         queens = [random.randint(1, N) for col in range(N)]
         return NQueensState(queens=queens)
 
-    def plot(self, ax=None, width=512, height=512, show_conflicts=False, fc='darkslateblue'):
+    def plot(self, ax=None, figsize=(6, 6), show_conflicts=False, fc='darkslateblue'):
+        
         if ax is None:
-            fig = plt.figure()
-            ax = fig.add_subplot(1, 1, 1)
-            
+            fig = plt.figure(figsize=figsize)
+            ax = fig.add_subplot(1,1,1)
+        
         N = self.N
 
-        w, h = width // N, height // N
-
-        border = plt.Rectangle((0, 0), N * w, N * h, ec=fc, fc='w', alpha=0.35)
+        border = plt.Rectangle((0, 0), N, N, ec=fc, fc='w', alpha=0.35)
         ax.add_patch(border)
 
         # draw chess board
         for i in range(N):
             for j in range(N):
                 alpha = 0.35 if (i + j) % 2 == 0 else 0.1
-                cell = plt.Rectangle((i * w, j * h), w, h, fc=fc, alpha=alpha)
+                cell = plt.Rectangle((i, j), 1, 1, fc=fc, alpha=alpha)
                 ax.add_patch(cell)
-        
+
         # show conflicts
         if show_conflicts:
             for i in range(N - 1):
@@ -110,17 +109,16 @@ class NQueensState:
                 for j in range(i + 1, N):
                     row_j = self.queens[j]
                     if row_i == row_j or abs(row_i - row_j) == j - i:
-                        x1, x2 = i * w + w // 2, j * w + w // 2
-                        y1, y2 = (row_i - 1) * h + h // 2, (row_j - 1) * h + h // 2
+                        x1, x2 = i + 0.5, j + 0.5
+                        y1, y2 = (row_i - 1) + 0.5, (row_j - 1) + 0.5
                         line = plt.Line2D((x1, x2), (y1, y2), lw=3, ls='-', color='orchid', alpha=0.6)
                         ax.add_line(line)
 
         # place queens on chess board
         for col, row in enumerate(self.queens):
-            c = 'k' if (col + row) % 2 == 0 else 'w'
-            x = col * w + w // 2
-            y = (row - 1) * h + h // 2
-            fs = w // 2
+            x = col + 0.5
+            y = (row - 1) + 0.5
+            fs = max(1, figsize[0] * 50 // N)
             ax.text(x, y, '♛', color='k', fontsize=fs, ha='center', va='center')
 
         ax.axis('square')
